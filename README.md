@@ -2,7 +2,7 @@
 
 ### Yurii Romanov, 159460
 
-## Sprowozdanie z projektu
+## Sprawozdanie z projektu
 
 #### Wstęp
 

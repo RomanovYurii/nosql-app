@@ -9,7 +9,9 @@
     "swagger:generate": "node swagger.js",
     "docker:build": "docker build .",
     "docker:up": "docker compose up",
-    "docker:build-and-up": "yarn docker:build && yarn docker:up"
+    "docker:build-and-up": "yarn docker:build && yarn docker:up",
+    "db:dump": "mongodump --host localhost --port 27017 --db students_db --username admin --password pass --authenticationDatabase admin",
+    "db:restore": "mongorestore --host localhost --port 27017 --db students_db dump/students_db --username admin --password pass --authenticationDatabase admin"
   },
   "dependencies": {
     "@ngneat/falso": "^7.1.1",
