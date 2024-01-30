@@ -9,7 +9,7 @@
     "swagger:generate": "node swagger.js",
     "docker:build": "docker build .",
     "docker:up": "docker compose up",
-    "start:full-cylce": "yarn swagger:generate && yarn docker:build && yarn docker:up"
+    "docker:build-and-up": "yarn docker:build && yarn docker:up"
   },
   "dependencies": {
     "@ngneat/falso": "^7.1.1",
