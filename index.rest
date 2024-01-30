@@ -1,0 +1,108 @@
+### Student CRUD
+
+### Create
+POST /student/ HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Content-Length: 60
+
+{
+  "first_name": "Yurii",
+  "last_name": "Romanov"
+}
+
+### Read
+GET /student/?id=65b85494d47fc6bace3e8922 HTTP/1.1
+Host: localhost:3000
+
+### Update
+PUT /student/ HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Content-Length: 60
+
+{
+  "id": "65b85494d47fc6bace3e8922",
+  "first_name": "YuriiYurii",
+  "last_name": "RomanovRomanov"
+}
+
+### Delete
+DELETE /student/ HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Content-Length: 60
+
+{
+  "id": "65b85494d47fc6bace3e8922"
+}
+
+### Message CRUD
+
+### Create
+POST /message HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Content-Length: 94
+
+{
+  "text": "Lorem ipsum dolor sit amet.",
+  "student_id": "65b847cbc2178245b91e5e52"
+}
+
+### Read
+GET /message?id=65b850518fb3201f1fdd9ab7 HTTP/1.1
+Host: localhost:3000
+
+### Update
+GET /message HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Content-Length: 88
+
+{
+  "id": "65b850518fb3201f1fdd9ab7",
+  "text": "LLLorem ipsum dolor sit amet."
+}
+
+### Delete
+DELETE /message HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Content-Length: 42
+
+{
+  "id": "65b850518fb3201f1fdd9ab7"
+}
+
+### Special actions
+
+### Get all messages of a student
+GET /message/allByStudentId?student_id=65b85408afbeab9e7d86d3c0 HTTP/1.1
+Host: localhost:3000
+
+### Get student details by message id
+GET /student/detailsByMessageId?message_id=65b850518fb3201f1fdd9ab7 HTTP/1.1
+Host: localhost:3000
+
+### Other actions
+
+### Get all students
+GET /student/all HTTP/1.1
+Host: localhost:3000
+
+### Get all messages
+GET /message/all HTTP/1.1
+Host: localhost:3000
+
+### Delete all messages
+DELETE /message/all HTTP/1.1
+Host: localhost:3000
+
+### Delete all students
+DELETE /student/all HTTP/1.1
+Host: localhost:3000
+
+### Feed random data to db
+POST /feed HTTP/1.1
+Host: localhost:3000
