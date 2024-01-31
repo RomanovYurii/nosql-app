@@ -31,8 +31,6 @@ services:
       - NODE_ENV=production
     networks:
       - app-network
-    volumes:
-      - .:/usr/app
     depends_on:
       - mongodb
 
