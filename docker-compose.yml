@@ -18,9 +18,7 @@ services:
 
   nodejs:
     container_name: nodejs
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: nosql-app:node
     restart: always
     ports:
       - ${SERVER_PORT}:${SERVER_PORT}
