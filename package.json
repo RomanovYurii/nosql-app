@@ -7,11 +7,12 @@
     "start": "node index.js",
     "watch": "nodemon index.js",
     "swagger:generate": "node swagger.js",
-    "docker:build": "docker build .",
+    "docker:build": "docker build -t nosql-app:node .",
     "docker:up": "docker compose up",
-    "docker:build-and-up": "yarn docker:build && yarn docker:up",
-    "db:dump": "mongodump --host localhost --port 27017 --db students_db --username admin --password pass --authenticationDatabase admin",
-    "db:restore": "mongorestore --host localhost --port 27017 --db students_db dump/students_db --username admin --password pass --authenticationDatabase admin"
+    "docker:down": "docker compose down",
+    "docker:rmi": "docker rmi nosql-app:node",
+    "docker:cleanup": "yarn docker:down && yarn docker:rmi",
+    "docker:build-and-up": "yarn docker:cleanup && yarn docker:build && yarn docker:up"
   },
   "dependencies": {
     "@ngneat/falso": "^7.1.1",
