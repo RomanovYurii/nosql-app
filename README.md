@@ -42,7 +42,23 @@ docker build .
 docker compose up
 ```
 
-Po odpaleniu tych poleceń, zacznie się budowanie i praca środowiska. 
+Po odpaleniu tych poleceń, zacznie się budowanie i praca środowiska.
+
+---
+
+Dla usunięcia aplikacji można użyć polecenia
+```bash
+yarn docker:cleanup
+```
+lub po kolei
+```bash
+docker compose down
+```
+```bash
+docker rmi nosql-app
+```
+
+---
 
 Gdy w konsoli wyświetli się następujaca wiadomość, znaczy to, że z API już można korzystać.
 ```
